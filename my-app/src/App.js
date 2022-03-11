@@ -47,9 +47,10 @@ function App() {
     if (e.key === "Enter"){
       const temp = [...list];
       let tem;
+      const maxId= list.reduce((pre,cur) => pre.id > cur.id ? pre : cur)
       if (temp.length!=0){
         tem = {
-          id:temp[temp.length-1].id + 1,
+          id: maxId.id + 1,
           content: input,
           isDone:false,
           isEdit: false,
@@ -153,6 +154,7 @@ function Display({list, handleRemove, handleEdit, editContent, editChange, handl
   if (searchInput){
     array1 = array1.filter(element => element.content.includes(searchInput));
   } 
+  console.log(array1);
   return (<div className="todolist_contain">
   <input className="searchinput" onChange={search} placeholder={"Search the to do list"}/>
   {array1.map((ele) => {
