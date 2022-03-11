@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+.control{
+  display:flex;
+  width: 200px;
+  justify-content: space-between;
+}
+
+.edit{
+  padding:10px;
+}
+
+.item{
+  margin: 10px;
+}
+.todo_input{
+  width:200px;
+}
+.searchinput{
+  width:200px;
+}
+
